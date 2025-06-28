@@ -1,0 +1,73 @@
+/* Main CSS styles for the frontend */
+
+/* Chat interface styles */
+.stChatMessage {
+    border-radius: 12px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.stChatMessage[data-testid="user-message"] {
+    background-color: #f0f8ff;
+    border-left: 4px solid #1e90ff;
+}
+
+.stChatMessage[data-testid="assistant-message"] {
+    background-color: #f9f9f9;
+    border-left: 4px solid #808080;
+}
+
+/* Calendar view styles */
+.calendar-day-view {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+}
+
+.calendar-week-view {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0.5rem;
+}
+
+.event-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-left: 4px solid #1e90ff;
+}
+
+.event-card.compact {
+    padding: 0.25rem;
+    font-size: 0.9rem;
+}
+
+/* Button styles */
+.stButton>button {
+    border-radius: 8px;
+    border: 1px solid #1e90ff;
+    background-color: white;
+    color: #1e90ff;
+    transition: all 0.3s ease;
+}
+
+.stButton>button:hover {
+    background-color: #1e90ff;
+    color: white;
+}
+
+/* Time slot buttons */
+.time-slot-btn {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 0.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .calendar-week-view {
+        grid-template-columns: 1fr;
+    }
+}             
